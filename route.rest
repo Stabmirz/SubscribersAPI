@@ -1,14 +1,30 @@
-GET http://localhost:3000/subscribers
+GET http://localhost:3000/api/users
 
 ###
 
-GET http://localhost:3000/subscribers/14
+GET http://localhost:3000/api/users/5e9f978f54b1ec0e6e8816ec
 
 ###
-POST http://localhost:3000/subscribers
+POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "name":"Amazing Person",
-    "subscribedToChannel":"Web Dev"
+    "first_name":"Amazing",
+    "last_name":"Person",
+    "title":"Web Dev",
+    "website":"abi.mirza.com"
 }
+
+
+
+###
+PATCH  http://localhost:3000/api/users/5e9f978f54b1ec0e6e8816ec
+Content-Type: application/json
+
+{
+    "first_name":"New Person"
+}
+
+
+###
+DELETE   http://localhost:3000/api/users/5e9f99054158520f00617d62

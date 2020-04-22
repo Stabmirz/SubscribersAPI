@@ -9,8 +9,8 @@ const db = mongoose.connection;
 
 app.use(express.json());
 
-const subscribersRouter = require('./routes/subscribers');
-app.use("/subscribers", subscribersRouter);
+const apiRoute = require('./routes/api');
+app.use("/api", apiRoute);
 
 
 app.listen(3000, () => {
